@@ -14,9 +14,6 @@ export default async function handler(req, res) {
 
     res.status(200).json(response.data);
   } catch (error) {
-    console.error("Hadith API Error:", error.message);
-    res.status(500).json({
-      message: "Failed to fetch hadiths",
-    });
+    res.status(500).json({ message: "Failed to fetch hadiths" });
   }
 }
